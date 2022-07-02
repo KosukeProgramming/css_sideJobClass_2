@@ -1,0 +1,242 @@
+@charset "utf-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* 以上、リセットCSS */
+.common__inner {
+    padding: 30px 0;
+    max-width: 1440px;
+    width: 1000px;
+    margin: 0 auto;
+}
+.common__title {
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+    margin-bottom: 30px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: #95A4C0;
+}
+.common__title::before, .common__title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    vertical-align: middle;
+    background-color: red;
+}
+.common__title::before {
+    right: 100%;
+    margin-right: 10px;
+}
+.common__title::after {
+    left: 100%;
+    margin-left: 10px;
+}
+/* Flow */
+.flow {
+    text-align: center;
+}
+.flow__subTitle {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+.flow-content {
+    display: flex;
+    justify-content: space-between;
+}
+.flow-content__item {
+    position: relative;
+    width: calc((100% - 80px) / 3);
+    height: 0;
+}
+.step {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.step-number {
+    font-size: 45px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.arrow::after {
+    content: '→';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 20px);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 25px;
+}
+.flow-content__item-des {
+    position: absolute;
+    padding-top: 75%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(230, 246, 247, 0.7);
+    z-index: -1;
+}
+.flow-content__item-des__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: max-content;
+    font-size: 25px;
+    font-weight: bold;
+}
+.flow-content__txt {
+    line-height: 1.5;
+}
+@media screen and (max-width:1000px) {
+    .common__inner {
+        width: 100%;
+    }
+    .flow__subTitle {
+        margin-bottom: 65px;
+    }
+    .flow-content {
+        flex-direction: column;
+        height: 620px;
+        align-items: center;
+    }
+    .flow-content__item {
+        min-width: 300px;
+        width: calc(100% / 3);
+    }
+    .arrow::after {
+        content: '↓';
+        top: calc(100% + 35px);
+        left: 50%;
+    }
+    .step {
+        font-size: 15px;
+    }
+    .step-number {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:767px) {
+    .common__title {
+        font-size: 20px;
+    }
+    .common__title::before, .common__title::after {
+        height: 2px;
+        background-color: red;
+    }
+    .flow__subTitle {
+        font-size: 25px;
+    }
+}
